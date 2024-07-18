@@ -1,0 +1,16 @@
+﻿#region
+
+using SRF;
+
+#endregion
+
+namespace SRDebugger.UI.Other
+{
+    public class SetLayerFromSettings : SRMonoBehaviour
+    {
+        private void Start()
+        {
+            gameObject.SetLayerRecursive(Settings.Instance.DebugLayer);
+        }
+    }
+}
