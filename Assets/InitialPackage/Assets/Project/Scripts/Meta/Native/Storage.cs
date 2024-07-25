@@ -14,7 +14,7 @@ namespace Project.Meta
         private Storage()
         {
             _serializerSettings = new JsonSerializerSettings();
-            _serializerSettings.Formatting = Formatting.Indented;
+            _serializerSettings.Formatting = Formatting.None;
             _serializerSettings.NullValueHandling = NullValueHandling.Include;
             _serializerSettings.MissingMemberHandling = MissingMemberHandling.Error;
         }

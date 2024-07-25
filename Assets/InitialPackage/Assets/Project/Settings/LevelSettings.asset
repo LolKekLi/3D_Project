@@ -18,10 +18,5 @@ MonoBehaviour:
   _levels:
   - EmptyScene
   _loopedLevels: []
-  _coinPresets:
-  - <LevelIndex>k__BackingField:
-      _min: 0
-      _max: 10
-    <Coin>k__BackingField: 20
   <ResultDelay>k__BackingField: 0
   <FailDelay>k__BackingField: 0

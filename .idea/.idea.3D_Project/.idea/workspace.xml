@@ -5,8 +5,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b62001c-d361-493b-862d-f4f9d0434cf5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Data.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Project/Scripts/Data.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.3D_Project/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.3D_Project/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Art/Fonts/BalooThambi2-ExtraBold SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Art/Fonts/BalooThambi2-ExtraBold SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Dev/Zenject/Installers/ProjectContextInstaller.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Dev/Zenject/Installers/ProjectContextInstaller.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scenes/EmptyScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scenes/EmptyScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scenes/SampleSceneSettings.lighting" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scenes/SampleSceneSettings.lighting.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scenes/Startup.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scenes/Startup.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scenes/UICommon.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scenes/UICommon.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Meta/Native/Storage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Meta/Native/Storage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Settings/LevelSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Settings/LevelSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Zenject/Installers/ProjectContextInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Zenject/Installers/ProjectContextInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Zenject/Installers/UICommonSceneInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Zenject/Installers/UICommonSceneInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Zenject/Managers/ZenjectManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Scripts/Zenject/Managers/ZenjectManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Settings/LevelSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Assets/Project/Settings/LevelSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Epic Toon FX/Prefabs/Combat/Blood/Red/BloodDripping.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Epic Toon FX/Prefabs/Combat/Blood/Red/BloodDripping.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Epic Toon FX/Prefabs/Combat/Blood/Red/BloodExplosionSpikyAnimated.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Epic Toon FX/Prefabs/Combat/Blood/Red/BloodExplosionSpikyAnimated.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Epic Toon FX/Prefabs/Combat/Blood/Red/BloodFlowing.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Epic Toon FX/Prefabs/Combat/Blood/Red/BloodFlowing.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InitialPackage/Epic Toon FX/Prefabs/Combat/Death/CuteDeath.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InitialPackage/Epic Toon FX/Prefabs/Combat/Death/CuteDeath.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +44,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/07b0ee94ee1a489989573d23a60d02b89be00/f8/a71c0b89/Formatting.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2acbecbc299e4654adc94df891af51f2952c00/80/a6350293/IPreprocessBuildWithReport.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bfbc89a04b6b4dd49c3614d03fc31ce846ac00/05/6f5d6483/CancellationTokenSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bfbc89a04b6b4dd49c3614d03fc31ce846ac00/70/3e05d111/TimeSpan.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Project/Scripts/TestUnitask.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.editorcoroutines@1.0.0/Editor/EditorCoroutine.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.27/Rider/Editor/StartUpMethodExecutor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/UIBehaviour.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Button/ButtonTests.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Tests/Runtime/Canvas/NoActiveCameraInSceneDoesNotCrashEditor.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
@@ -28,26 +64,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.C#&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "XThreadsFramesViewSplitterKey": "0.35853657",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.C#",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\Кирилл\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\Кирилл\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\Кирилл\\AppData\\Local\\Symbols\\src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\Кирилл\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\Кирилл\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\Кирилл\\AppData\\Local\\Symbols\\src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="E:\UnityVersions\2022.3.19f1\Editor\Unity.exe" />
@@ -75,10 +113,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="31252">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="31252" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -100,6 +138,7 @@
       <workItem from="1721244245035" duration="1367000" />
       <workItem from="1721245633380" duration="1000" />
       <workItem from="1721245650133" duration="713000" />
+      <workItem from="1721321107957" duration="6720000" />
     </task>
     <servers />
   </component>

@@ -12,23 +12,6 @@ namespace Project.Settings
     [CreateAssetMenu(fileName = "LevelSettings", menuName = "Scriptable/LevelSettings", order = 0)]
     public class LevelSettings : ScriptableObject
     {
-        [Serializable]
-        public class FinishCoinPreset
-        {
-            [field: SerializeField]
-            public IntRange LevelIndex
-            {
-                get;
-                private set;
-            }
-
-            [field: SerializeField]
-            public int Coin
-            {
-                get;
-                private set;
-            }
-        }
         
 #if UNITY_EDITOR
         [SerializeField, Header("Test Group")]
@@ -46,10 +29,7 @@ namespace Project.Settings
         
         [SerializeField]
         private string[] _loopedLevels = null;
-
-        [Header("Finish")]
-        [SerializeField]
-        private FinishCoinPreset[] _coinPresets = null;
+        
         
         [field: SerializeField]
         public float ResultDelay

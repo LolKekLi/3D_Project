@@ -2,12 +2,13 @@
 
 using Project.Meta;
 using Project.Service;
+using Project.UIDebug;
 using UnityEngine;
 using Zenject;
 
 #endregion
 
-namespace Project
+namespace Project   
 {
     [CreateAssetMenu(fileName = "ProjectContextInstaller", menuName = "Scriptable/Zenject/Project Context Installer")]
     public class ProjectContextInstaller : ScriptableObjectInstaller<ProjectContextInstaller>
