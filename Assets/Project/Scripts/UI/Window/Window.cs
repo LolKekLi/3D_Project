@@ -24,7 +24,7 @@ namespace Project.UI
         [SerializeField]
         private SelfTweenController _onHideAnimation = null;
 
-        private User _user = null;
+        protected User _user = null;
         protected UISystem _uiSystem = null;
         
         private UniRxSubscribersContainer _subscribersContainer = new UniRxSubscribersContainer();

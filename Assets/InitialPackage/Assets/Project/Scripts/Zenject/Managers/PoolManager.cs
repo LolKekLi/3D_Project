@@ -15,15 +15,11 @@ namespace Project
     {
         private LevelFlowController _levelFlowController = null;
         private DiContainer _diContainer = null;
-        
+
         private Dictionary<PooledBehaviour, Queue<PooledBehaviour>> _pooledObjects =
             new Dictionary<PooledBehaviour, Queue<PooledBehaviour>>();
 
-        public PoolSettings PoolSettings
-        {
-            get;
-            private set;
-        }
+        public PoolSettings PoolSettings { get; private set; }
 
         [Inject]
         public void Construct(DiContainer container, PoolSettings poolSettings, LevelFlowController levelFlowController)
@@ -32,32 +28,36 @@ namespace Project
             PoolSettings = poolSettings;
             _levelFlowController = levelFlowController;
         }
-        
+
         protected override void Init()
         {
             base.Init();
 
             PreparePool();
-            
+
             _levelFlowController.Preloaded += LevelFlowController_Preloaded;
         }
 
         protected override void DeInit()
         {
             base.DeInit();
-            
+
             _levelFlowController.Preloaded -= LevelFlowController_Preloaded;
         }
 
         private void PreparePool()
         {
+            foreach (var lootObject in PoolSettings.PickableLootObjects)
+            {
+                Prepare(lootObject, PooledObjectType.FreeOnBattleEnd, 5);
+            }
         }
-        
+
         private PooledBehaviour PrepareObject(PooledBehaviour pooledBehaviour, PooledObjectType pooledType)
         {
             PooledBehaviour obj =
                 _diContainer.InstantiatePrefabForComponent<PooledBehaviour>(pooledBehaviour, gameObject.transform);
-            
+
             obj.Prepare(pooledType, transform);
             obj.Init();
             obj.Free();
@@ -172,11 +172,11 @@ namespace Project
                 _pooledObjects.Remove(prefab);
             }
         }
-        
+
         private void FreeAll()
         {
             var pairsToFree = _pooledObjects;
-    
+
             foreach (var pair in pairsToFree)
             {
                 if (pair.Key.Type == PooledObjectType.FreeOnBattleEnd)

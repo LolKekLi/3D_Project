@@ -10,22 +10,20 @@ namespace Project.UI
 {
     public class UIJoystick : Joystick
     {
-        [Header("Following Settings")]
-        [SerializeField]
+        [Header("Following Settings")] [SerializeField]
         private bool _isFollowing = false;
-        [SerializeField] 
-        private float _moveThreshold = 1f;
 
-        [Header("Transition")]
-        [SerializeField]
+        [SerializeField] private float _moveThreshold = 1f;
+
+        [Header("Transition")] [SerializeField]
         private float _transitionTime = .2f;
 
-        [SerializeField]
-        private float _activeAlpha = 0f;
+        [SerializeField] private float _activeAlpha = 1f;
 
-        [SerializeField]
-        private float _disabledAlpha = 0f;
-        
+        [SerializeField] private float _disabledAlpha = 0f;
+
+        [SerializeField] private bool _needReturnToDefaultPosition = true;
+
         private Vector2 _defaultPosition = Vector2.zero;
 
         private Coroutine _transitionCor = null;
@@ -33,14 +31,14 @@ namespace Project.UI
         protected override void Start()
         {
             base.Start();
-            
+
             _defaultPosition = _background.rectTransform.anchoredPosition;
         }
 
         public override void OnPointerDown(PointerEventData eventData)
         {
             base.OnPointerDown(eventData);
-            
+
             _background.rectTransform.anchoredPosition = eventData.position / _canvas.scaleFactor;
             _handle.rectTransform.anchoredPosition = Vector2.zero;
 
@@ -56,9 +54,12 @@ namespace Project.UI
         public override void OnPointerUp(PointerEventData eventData)
         {
             base.OnPointerUp(eventData);
-            
-            _background.rectTransform.anchoredPosition = _defaultPosition;
-            
+
+            if (_needReturnToDefaultPosition)
+            {
+                _background.rectTransform.anchoredPosition = _defaultPosition;
+            }
+
             if (_transitionCor != null)
             {
                 StopCoroutine(_transitionCor);
@@ -67,7 +68,7 @@ namespace Project.UI
 
             _transitionCor = StartCoroutine(TransitionCor(_disabledAlpha));
         }
-        
+
         protected override void HandleInput(float magnitude, Vector2 normalised, Vector2 radius, Camera cam)
         {
             if (magnitude > _moveThreshold && _isFollowing)
@@ -75,10 +76,10 @@ namespace Project.UI
                 Vector2 difference = normalised * (magnitude - _moveThreshold) * radius;
                 _background.rectTransform.anchoredPosition += difference;
             }
-            
+
             base.HandleInput(magnitude, normalised, radius, cam);
         }
-        
+
         private IEnumerator TransitionCor(float targetAlpha)
         {
             float time = 0f;
@@ -87,7 +88,7 @@ namespace Project.UI
             float backgroundStartAlpha = _background.color.a;
             float handleStartAlpha = _handle.color.a;
             Color color = default;
-            
+
             while (time < _transitionTime)
             {
                 yield return null;
@@ -98,7 +99,7 @@ namespace Project.UI
                 color = _background.color;
                 color.a = Mathf.Lerp(backgroundStartAlpha, targetAlpha, progress);
                 _background.color = color;
-                
+
                 color = _handle.color;
                 color.a = Mathf.Lerp(handleStartAlpha, targetAlpha, progress);
                 _handle.color = color;

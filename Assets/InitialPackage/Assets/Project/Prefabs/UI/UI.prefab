@@ -26,13 +26,13 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1032803734699178880}
   - {fileID: 9026249521440508025}
   - {fileID: 1051665174845290015}
   - {fileID: 9205718562414879305}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -44,11 +44,16 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1525107625205393229}
     m_Modifications:
     - target: {fileID: 388485817175896214, guid: 3f97182fd1b00412c871d6c9390ebd2d, type: 3}
       propertyPath: m_Name
       value: MainWindow
+      objectReference: {fileID: 0}
+    - target: {fileID: 388485817175896214, guid: 3f97182fd1b00412c871d6c9390ebd2d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7840965168489638882, guid: 3f97182fd1b00412c871d6c9390ebd2d, type: 3}
       propertyPath: m_Pivot.x
@@ -147,6 +152,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f97182fd1b00412c871d6c9390ebd2d, type: 3}
 --- !u!224 &9026249521440508025 stripped
 RectTransform:
@@ -158,6 +166,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1525107625205393229}
     m_Modifications:
     - target: {fileID: 1614928301200796172, guid: 57e0963278c5a4662b10a39b59e98ac3, type: 3}
@@ -249,6 +258,9 @@ PrefabInstance:
       value: GameWindow
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57e0963278c5a4662b10a39b59e98ac3, type: 3}
 --- !u!224 &1032803734699178880 stripped
 RectTransform:
@@ -260,6 +272,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1525107625205393229}
     m_Modifications:
     - target: {fileID: 2332238406532146980, guid: 89504500d16c74bfaa388ce8e4445422, type: 3}
@@ -362,7 +375,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ResultPopup
       objectReference: {fileID: 0}
+    - target: {fileID: 5325893538232007760, guid: 89504500d16c74bfaa388ce8e4445422, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 89504500d16c74bfaa388ce8e4445422, type: 3}
 --- !u!224 &1051665174845290015 stripped
 RectTransform:
@@ -374,6 +394,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 3
     m_TransformParent: {fileID: 1525107625205393229}
     m_Modifications:
     - target: {fileID: 2332238406532146980, guid: 440f68fe99c0c4406a21397fa161898a, type: 3}
@@ -464,7 +485,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FailWindow
       objectReference: {fileID: 0}
+    - target: {fileID: 5325893538232007760, guid: 440f68fe99c0c4406a21397fa161898a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 440f68fe99c0c4406a21397fa161898a, type: 3}
 --- !u!224 &9205718562414879305 stripped
 RectTransform:

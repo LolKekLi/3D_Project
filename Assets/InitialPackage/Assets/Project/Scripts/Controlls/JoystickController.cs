@@ -9,19 +9,16 @@ using Zenject;
 
 namespace Project.UI
 {
-	public class JoystickController : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
-	{
-        public static event Action Clicked = delegate { };
-        public static event Action<Vector2> Dragged = delegate { };
-        public static event Action Released = delegate { };
+    public class JoystickController : MonoBehaviour, IDragHandler, IPointerDownHandler, IPointerUpHandler
+    {
+        public event Action Clicked = delegate { };
+        public event Action<Vector2> Dragged = delegate { };
+        public event Action Released = delegate { };
 
-        [SerializeField]
-        private float _minRad = 0f;
-        [SerializeField]
-        private float _maxRad = 1f;
-        [SerializeField]
-        private float _lerpPower = 1f;
-        
+        [SerializeField] private float _minRad = 0f;
+        [SerializeField] private float _maxRad = 1f;
+        [SerializeField] private float _lerpPower = 1f;
+
         private Vector2 _currentPos = Vector2.zero;
         private Vector2 _prevPos = Vector2.zero;
         private Vector2 _resultDirection = Vector2.zero;
@@ -29,14 +26,14 @@ namespace Project.UI
         private Vector2 _inputDirection = Vector2.zero;
 
         private float _speed = 0f;
-        
+
         private bool _isHolding = false;
         private bool _isCameOut = true;
 
         private Camera _uiCamera = null;
 
         public Vector2 InputDirection => _inputDirection;
-        
+
         public float Speed => _speed;
 
         [Inject]
@@ -50,7 +47,7 @@ namespace Project.UI
             Vector2 pos = GetPosition();
 
             var posMagnitude = pos.sqrMagnitude;
-            
+
             if (posMagnitude > 0.01f)
             {
                 _resultDirection = pos.normalized;
@@ -137,5 +134,5 @@ namespace Project.UI
 
             _isHolding = false;
         }
-	}
+    }
 }

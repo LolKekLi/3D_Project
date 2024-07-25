@@ -124,7 +124,7 @@ namespace Project.UI
             {
                 var window = _stack.Pop();
                 _current = _stack.Peek();
-
+    
                 await window.Hide(true, UniTaskUtil.RefreshToken(ref _returnToPreviousWindowToken));
             }
         }

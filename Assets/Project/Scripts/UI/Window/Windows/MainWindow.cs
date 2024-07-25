@@ -16,7 +16,6 @@ namespace Project.UI
         [Inject]
         private LevelFlowController _levelFlowController = null;
         
-        
         protected override void Start()
         {
             base.Start();

@@ -1,5 +1,6 @@
 #region
 
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -17,26 +18,13 @@ namespace Project.UI
 
     public class Joystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
     {
-        [SerializeField]
-        private float _handleRange = 1;
-
-        [SerializeField]
-        protected float _deadZone = 0;
-
-        [SerializeField]
-        private AxisOptions _axisOptions = AxisOptions.Both;
-
-        [SerializeField]
-        private bool _isSnapX = false;
-
-        [SerializeField]
-        private bool _isSnapY = false;
-
-        [SerializeField]
-        protected Image _background = null;
-
-        [SerializeField]
-        protected Image _handle = null;
+        [SerializeField] private float _handleRange = 1;
+        [SerializeField] protected float _deadZone = 0;
+        [SerializeField] private AxisOptions _axisOptions = AxisOptions.Both;
+        [SerializeField] private bool _isSnapX = false;
+        [SerializeField] private bool _isSnapY = false;
+        [SerializeField] protected Image _background = null;
+        [SerializeField] protected Image _handle = null;
 
         private RectTransform baseRect = null;
 
@@ -47,88 +35,49 @@ namespace Project.UI
 
         public float Horizontal
         {
-            get
-            {
-                return (_isSnapX) ? SnapFloat(_input.x, AxisOptions.Horizontal) : _input.x;
-            }
+            get { return (_isSnapX) ? SnapFloat(_input.x, AxisOptions.Horizontal) : _input.x; }
         }
 
         public float Vertical
         {
-            get
-            {
-                return (_isSnapY) ? SnapFloat(_input.y, AxisOptions.Vertical) : _input.y;
-            }
+            get { return (_isSnapY) ? SnapFloat(_input.y, AxisOptions.Vertical) : _input.y; }
         }
 
         public Vector2 Direction
         {
-            get
-            {
-                return new Vector2(Horizontal, Vertical);
-            }
+            get { return new Vector2(Horizontal, Vertical); }
         }
 
         public float HandleRange
         {
-            get
-            {
-                return _handleRange;
-            }
-            set
-            {
-                _handleRange = Mathf.Abs(value);
-            }
+            get { return _handleRange; }
+            set { _handleRange = Mathf.Abs(value); }
         }
 
         public float DeadZone
         {
-            get
-            {
-                return _deadZone;
-            }
-            set
-            {
-                _deadZone = Mathf.Abs(value);
-            }
+            get { return _deadZone; }
+            set { _deadZone = Mathf.Abs(value); }
         }
 
         public AxisOptions AxisOptions
         {
-            get
-            {
-                return AxisOptions;
-            }
-            set
-            {
-                _axisOptions = value;
-            }
+            get { return AxisOptions; }
+            set { _axisOptions = value; }
         }
 
         public bool IsSnapX
         {
-            get
-            {
-                return _isSnapX;
-            }
-            set
-            {
-                _isSnapX = value;
-            }
+            get { return _isSnapX; }
+            set { _isSnapX = value; }
         }
 
         public bool IsSnapY
         {
-            get
-            {
-                return _isSnapY;
-            }
-            set
-            {
-                _isSnapY = value;
-            }
+            get { return _isSnapY; }
+            set { _isSnapY = value; }
         }
-        
+
         protected virtual void Start()
         {
             HandleRange = _handleRange;
@@ -233,7 +182,8 @@ namespace Project.UI
         protected Vector2 ScreenPointToAnchoredPosition(Vector2 screenPosition)
         {
             Vector2 localPoint = Vector2.zero;
-            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(baseRect, screenPosition, _camera, out localPoint))
+            if (RectTransformUtility.ScreenPointToLocalPointInRectangle(baseRect, screenPosition, _camera,
+                    out localPoint))
             {
                 Vector2 pivotOffset = baseRect.pivot * baseRect.sizeDelta;
                 return localPoint - (_background.rectTransform.anchorMax * baseRect.sizeDelta) + pivotOffset;

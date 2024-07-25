@@ -22,5 +22,13 @@ namespace Project.Settings
             get;
             private set;
         }
+
+        [field: SerializeField]
+        public AbstarctPickableLootObject[] PickableLootObjects
+        {
+            get;
+            private set;
+        }
+
     }
 }

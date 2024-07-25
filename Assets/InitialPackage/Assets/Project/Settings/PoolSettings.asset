@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <PooledAudio>k__BackingField: {fileID: 6721363782500263695, guid: f5e361ba72fd74ab484d6986ab7239ef, type: 3}
   <LoopPoledAudio>k__BackingField: {fileID: -2184425344142012204, guid: df43a7b8dc37842c888b3396a214d86d, type: 3}
+  <PickableLootObjects>k__BackingField:
+  - {fileID: 5553822174966859360, guid: eb280143ad8975e4fb789227468f1da9, type: 3}
+  - {fileID: 2146247458143820078, guid: fba8d27950452be48a6e6ad547d9525c, type: 3}
