@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Project/Scenes/EmptyScene.unity
     guid: 8c374e34c68294b77a0291c9307c26dd
+  - enabled: 1
+    path: Assets/Project/Scenes/NavMesh.unity
+    guid: cc2f3afc6de57654aa86cbe2eca0fb6f
   m_configObjects: {}

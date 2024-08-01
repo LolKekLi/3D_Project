@@ -133,6 +133,7 @@ namespace Project.UI
             Released();
 
             _isHolding = false;
+            _inputDirection = Vector2.zero;
         }
     }
 }

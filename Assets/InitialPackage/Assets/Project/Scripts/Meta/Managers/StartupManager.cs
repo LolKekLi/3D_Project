@@ -15,8 +15,8 @@ namespace Project
     {
         private const string MainUI = "UICommon";
         
-        [SerializeField, Header("Loading")]
-        private SlicedFilledImage _loadingProgress = null;
+        //[SerializeField, Header("Loading")]
+        //private SlicedFilledImage _loadingProgress = null;
 
         [SerializeField]
         private CanvasGroup[] _canvasGroups = null;
@@ -57,7 +57,7 @@ namespace Project
 
             void updateLoadingProgress()
             {
-                _loadingProgress.fillAmount = Mathf.Clamp(time / _loadingSettings.LoadingTime, 0, 1);
+                //_loadingProgress.fillAmount = Mathf.Clamp(time / _loadingSettings.LoadingTime, 0, 1);
             }
             
             while (uiWaiter.progress < 1)
@@ -73,14 +73,14 @@ namespace Project
 
             while (levelWaiter.Status == UniTaskStatus.Pending || time < _loadingSettings.LoadingTime)
             {
-                _loadingProgress.fillAmount = time / _loadingSettings.LoadingTime;
+                //_loadingProgress.fillAmount = time / _loadingSettings.LoadingTime;
                 
                 await UniTask.Yield();
 
                 time += Time.deltaTime;
             }
 
-            _loadingProgress.fillAmount = 1f;
+           // _loadingProgress.fillAmount = 1f;
         }
         
         private async UniTask FadeAsync()
