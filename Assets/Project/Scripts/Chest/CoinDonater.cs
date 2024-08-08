@@ -16,8 +16,7 @@ public class CoinDonater : MonoBehaviour
     [SerializeField] private float _forceTorgue;
 
     [SerializeField] private KeyWithDelay[] _keyWithDelay;
-
-
+    
     private UISystem _uiSystem;
     private Dictionary<string, object> _getFreeCoinsData;
     private PoolManager _poolManager;

@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e5d33b901343e9bc891d6ac43c0497, type: 3}
   m_Name: ParticleSettings
   m_EditorClassIdentifier: 
-  <ParticlePresets>k__BackingField: []
+  <ParticlePresets>k__BackingField:
+  - <Particle>k__BackingField: {fileID: 2327936724921728823, guid: 09d9de58ef3bf5444ac94afa0e6013cb, type: 3}
+    <Type>k__BackingField: 0

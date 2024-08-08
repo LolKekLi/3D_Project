@@ -64,11 +64,15 @@ namespace Project.Meta
             if (type == CurrencyType.Coin)
             {
                 _coins.Value += amount;
+                
+                return;
             }
             
             if (type == CurrencyType.Ruby)
             {
                 _rubys.Value += amount;
+                
+                return;
             }
         }
 
@@ -82,7 +86,7 @@ namespace Project.Meta
             Load();
 
             _coins.Value = ConcreteData.MoneyCount;
-            _coins.Value = ConcreteData.RubysCount;
+            _rubys.Value = ConcreteData.RubysCount;
             _levelIndex.Value = ConcreteData.LevelIndex;
             
             _subscribersContainer.Subscribe(Coins, i =>

@@ -2,67 +2,22 @@ using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using Project;
-using Project.Scripts;
 using Project.UI;
 using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
 
-[Serializable]
-public class KeyWithDelay
-{
-    public string key;
-    public float delay;
-}
-
-public class Chest : MonoBehaviour
+public class Chest : ChooseObject
 {
     [SerializeField] private int _objectCount;
     [SerializeField] private float _force;
     [SerializeField] private float _forceTorgue;
     [SerializeField] private Animator _animator;
-
     [SerializeField] private KeyWithDelay[] _keyWithDelay;
-
-
-    private UISystem _uiSystem;
-    private Dictionary<string, object> _choosePopupData;
-    private PoolManager _poolManager;
-
+    
     [Inject]
-    private void Construct(UISystem uiSystem, PoolManager poolManager)
-    {
-        _poolManager = poolManager;
-        _uiSystem = uiSystem;
-    }
-
-    private void Start()
-    {
-        Action spawnLootAction = SpawnLoot;
-
-        _choosePopupData = new Dictionary<string, object>()
-        {
-            { ChoosePopup.CHOOSE_BUTTON_TEXT_KEY, "Open chest" },
-            { ChoosePopup.CHOOSE_BUTTON_ACTION, spawnLootAction }
-        };
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.TryGetComponent(out PlayerMovementController playerMovementController))
-        {
-            _uiSystem.ShowWindow<ChoosePopup>(_choosePopupData);
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.TryGetComponent(out PlayerMovementController playerMovementController))
-        {
-            _uiSystem.ShowWindow<GameWindow>();
-        }
-    }
-
+    private PoolManager _poolManager;
+    
     private async void SpawnLoot()
     {
         var keyWithDelay = _keyWithDelay.RandomElement();
@@ -103,5 +58,23 @@ public class Chest : MonoBehaviour
             default:
                 return null;
         }
+    }
+
+    public override Dictionary<string, object> GetPopupData()
+    {
+        if (_choosePopupData != null)
+        {
+            return _choosePopupData;
+        }
+        
+        Action spawnLootAction = SpawnLoot;
+
+        _choosePopupData = new Dictionary<string, object>()
+        {
+            { ChoosePopup.CHOOSE_BUTTON_TEXT_KEY, "Open chest" },
+            { ChoosePopup.CHOOSE_BUTTON_ACTION, spawnLootAction }
+        };
+
+        return _choosePopupData;
     }
 }

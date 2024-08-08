@@ -29,6 +29,5 @@ namespace Project.Settings
             get;
             private set;
         }
-
     }
 }

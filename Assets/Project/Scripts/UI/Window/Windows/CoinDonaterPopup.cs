@@ -30,8 +30,7 @@ namespace Project.UI
             _getFreeCoinsButtonText.text = GetDataValue<string>(GET_FREE_COINS_BUTTON_TEXT_KEY);
             _onGetFreeCoinsButtonClick = GetDataValue<Action>(GET_FREE_COINS_BUTTON_ACTION);
         }
-
-
+        
         private void OnGetFreeCoinsButtonClick()
         {
             _onGetFreeCoinsButtonClick?.Invoke();

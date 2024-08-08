@@ -35,7 +35,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 72.74, y: 72.74}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2413831529500816248
 CanvasRenderer:
@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 70b24d3baea531449ae7ac056e838fe9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 2720223653820566626}
   - component: {fileID: 1308256054145798361}
   - component: {fileID: 185159025299433739}
-  - component: {fileID: 2718647530575168624}
+  - component: {fileID: 6457281109525566647}
   m_Layer: 5
   m_Name: Joystick
   m_TagString: Untagged
@@ -154,6 +154,7 @@ MonoBehaviour:
   _transitionTime: 0.2
   _activeAlpha: 1
   _disabledAlpha: 0
+  _needReturnToDefaultPosition: 1
 --- !u!222 &185159025299433739
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -162,7 +163,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3698897821431268398}
   m_CullTransparentMesh: 1
---- !u!114 &2718647530575168624
+--- !u!114 &6457281109525566647
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,7 +176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 0
@@ -227,8 +228,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 540, y: 960}
-  m_SizeDelta: {x: 209.03, y: 209.03003}
+  m_AnchoredPosition: {x: 540, y: 267}
+  m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5163573759108514905
 CanvasRenderer:
@@ -258,7 +259,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ca27eb96a4f0c4145a479ad3e29790a2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7c78c1393b224be4c9be4dd9a1a48e9e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
