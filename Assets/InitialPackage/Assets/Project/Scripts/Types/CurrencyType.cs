@@ -4,5 +4,6 @@ namespace Project
     {
         Coin = 0,
         Ads = 1,
+        Ruby = 2,
     }
 }

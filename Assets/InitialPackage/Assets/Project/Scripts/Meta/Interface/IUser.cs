@@ -13,6 +13,11 @@ namespace Project.Meta
             get;
         }
         
+        public IReadOnlyReactiveProperty<int> Rubys
+        {
+            get;
+        }
+        
         bool CanUpgrade(CurrencyType type, int amount);
         void SetCurrency(CurrencyType type, int amount);
     }

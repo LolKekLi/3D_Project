@@ -98,8 +98,8 @@ public class Chest : MonoBehaviour
         {
             case PickableLootCoin coin:
                 return _poolManager.Get<PickableLootCoin>(pickableLootObject, transform.position, Quaternion.identity);
-            case PickableLootCube cube:
-                return _poolManager.Get<PickableLootCube>(pickableLootObject, transform.position, Quaternion.identity);
+            case PickableLootRuby ruby:
+                return _poolManager.Get<PickableLootRuby>(pickableLootObject, transform.position, Quaternion.identity);
             default:
                 return null;
         }

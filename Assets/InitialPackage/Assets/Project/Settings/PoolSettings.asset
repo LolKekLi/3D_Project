@@ -17,3 +17,4 @@ MonoBehaviour:
   <PickableLootObjects>k__BackingField:
   - {fileID: 5553822174966859360, guid: eb280143ad8975e4fb789227468f1da9, type: 3}
   - {fileID: 2146247458143820078, guid: fba8d27950452be48a6e6ad547d9525c, type: 3}
+  - {fileID: 2146247458143820078, guid: 5feabf10e989953488dca16506bec629, type: 3}

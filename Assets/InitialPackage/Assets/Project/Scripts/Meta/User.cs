@@ -12,6 +12,7 @@ namespace Project.Meta
     public class User : StorageObject<UserStorageData>, IUser, ILevelData, IDisposable, IInitializable
     {
         private ReactiveProperty<int> _coins = new ReactiveProperty<int>(0);
+        private ReactiveProperty<int> _rubys = new ReactiveProperty<int>(0);
         private ReactiveProperty<int> _levelIndex = new ReactiveProperty<int>(0);
 
         private UniRxSubscribersContainer _subscribersContainer = new UniRxSubscribersContainer();
@@ -19,6 +20,11 @@ namespace Project.Meta
         public IReadOnlyReactiveProperty<int> Coins
         {
             get => _coins;
+        }
+        
+        public IReadOnlyReactiveProperty<int> Rubys
+        {
+            get => _rubys;
         }
 
         public IReadOnlyReactiveProperty<int> LevelIndexProperty
@@ -41,6 +47,9 @@ namespace Project.Meta
                 case CurrencyType.Coin:
                     canPurchase = amount <= _coins.Value;
                     break;
+                case CurrencyType.Ruby:
+                    canPurchase = amount <= _rubys.Value;
+                    break;
 
                 default:
                     canPurchase = true;
@@ -56,6 +65,11 @@ namespace Project.Meta
             {
                 _coins.Value += amount;
             }
+            
+            if (type == CurrencyType.Ruby)
+            {
+                _rubys.Value += amount;
+            }
         }
 
         void IDisposable.Dispose()
@@ -68,11 +82,19 @@ namespace Project.Meta
             Load();
 
             _coins.Value = ConcreteData.MoneyCount;
+            _coins.Value = ConcreteData.RubysCount;
             _levelIndex.Value = ConcreteData.LevelIndex;
             
             _subscribersContainer.Subscribe(Coins, i =>
             {
                 ConcreteData.MoneyCount = i;
+                
+                Save();
+            });
+            
+            _subscribersContainer.Subscribe(Rubys, i =>
+            {
+                ConcreteData.RubysCount = i;
                 
                 Save();
             });

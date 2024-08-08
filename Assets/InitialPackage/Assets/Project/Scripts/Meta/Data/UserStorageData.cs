@@ -4,5 +4,6 @@ namespace Project.Meta
     {
         public int LevelIndex { get; set; }
         public int MoneyCount { get; set; }
+        public int RubysCount { get; set; }
     }
 }
